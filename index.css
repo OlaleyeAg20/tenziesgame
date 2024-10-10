@@ -1,0 +1,127 @@
+:root{
+    --body-bg: #0E1217;
+    --box-color: #FFFFDA;
+    --container-bg: #6c018d;
+    --container-bg-hover: #771396;
+}
+
+*{
+    box-sizing: border-box;
+    letter-spacing: .5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+*:focus{
+    outline: none;
+}
+
+*:focus-visible{
+    outline: var(--body-bg) 2px solid;
+    outline-offset: 2px;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background: var(--body-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    height: 100svh;
+    color: var(--body-bg);
+    font-family: sans-serif;
+}
+
+.container{
+    width: 80%;
+    max-width: 480px;
+    height: 60%;
+    border-radius: 8px;
+    background: var(--box-color);
+    padding: 1.2rem .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    align-items: center;
+    position: relative;
+}
+
+.boxContainer{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    place-items: center;
+}
+
+.box{
+    background: none;
+    border: 2px solid var(--body-bg);
+    width: 45px;
+    height: 45px;
+    border-radius: 4px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+  .btnClicked{
+    background: var(--container-bg);
+    color: var(--box-color);
+    border: none;
+}
+
+.box:active{
+    transform: scale(0.9);
+}
+
+.btn, .btn2{
+    padding: 1rem 1rem;
+    width: 200px;
+    margin-top: auto;
+    border: none;
+    background: var(--container-bg);
+    color: var(--box-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: .25rem;
+    cursor: pointer;
+}
+
+.btn:hover, .btn2:hover{
+    background-color: var(--container-bg-hover);
+}
+
+.btn:active, .btn2:active{
+    transform: scale(0.95);
+}
+
+.btn2{
+    margin-top: 1.2rem;
+}
+
+.winView{
+    position: fixed;
+    display: none;
+    top: 0;
+    bottom: 0;
+    width: 100vw;
+    background: #0E1217EA;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--box-color);
+}
+
+.winView img{
+    width: 35%;
+    max-width: 150px;
+}
+
+.winView h1{
+    color: var(--box-color);
+    margin-bottom: 2rem;
+}
